@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Sans', Arial, sans-serif;
+  background: #eaf6f2;
+  color: #222;
+}
+
+.advantages {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 48px 0 0 0;
+  background: #eaf6f2;
+}
+
+.advantages__header {
+  margin-left: 80px;
+  margin-bottom: 36px;
+}
+
+.advantages__label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 12px;
+  font-family: 'Fira Sans', Arial, sans-serif;
+}
+
+.advantages__title {
+  font-family: 'Comfortaa', cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+.advantages__subtitle {
+  font-size: 1.12rem;
+  color: #444;
+  max-width: 700px;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-family: 'Fira Sans', Arial, sans-serif;
+}
+
+.advantages__row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0 80px 0 80px;
+}
+
+.advantage {
+  flex: 1 1 0;
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.advantage img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 24px;
+  margin-bottom: 28px;
+  border: none;
+  box-shadow: none;
+  background: #e3e3e3;
+  display: block;
+}
+
+.advantage__title {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+  line-height: 1.18;
+}
+
+.advantage__desc {
+  font-size: 1.04rem;
+  color: #444;
+  font-family: 'Fira Sans', Arial, sans-serif;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
