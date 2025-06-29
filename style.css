@@ -1,8 +1,7 @@
-/* Базовые стили */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Fira Sans', Arial, sans-serif;
+  font-family: 'Fira Sans', 'Comfortaa', sans-serif;
   background: #eaf6f2;
   color: #222;
 }
@@ -14,119 +13,98 @@ body {
   background: #eaf6f2;
 }
 
-.advantages__header {
-  margin-left: 80px;
+.header {
   margin-bottom: 60px;
+  text-align: left;
 }
 
-.advantages__label {
-  font-size: 1rem;
+.label {
+  font-size: 16px;
   font-weight: 700;
   color: #222;
   margin-bottom: 24px;
-  font-family: 'Fira Sans', Arial, sans-serif;
+  font-family: 'Fira Sans', 'Comfortaa', sans-serif;
 }
 
-.advantages__title {
-  font-family: 'Comfortaa', cursive;
-  font-size: 3rem;
+.title {
+  font-family: 'Comfortaa', 'Fira Sans', sans-serif;
+  font-size: 48px;
   font-weight: 700;
-  margin: 0 0 18px 0;
-  letter-spacing: 0.01em;
+  margin: 0 0 32px 0;
+  letter-spacing: 0.2px;
   line-height: 1.1;
-  margin-bottom: 32px;
 }
 
-.advantages__subtitle {
-  font-family: 'Fira Sans', Arial, sans-serif;
+.subtitle {
+  font-family: 'Fira Sans', 'Comfortaa', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
-  letter-spacing: 0;
   color: #444;
-  text-align: left;
-  width: 768px;
-  min-height: 58px;
-  padding: 0;
-  display: block;
-  box-sizing: border-box;
-  margin-bottom: 60px;
+  max-width: 768px;
 }
 
-.advantages__row {
+.cards {
   display: flex;
-  justify-content: center;
   gap: 40px;
-  margin: 0 80px 0 80px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.advantage {
-  flex: 1 1 0;
-  width: 421px;
+.card {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
-.advantage img {
+.card img {
   width: 100%;
   height: 249px;
   object-fit: cover;
   border-radius: 24px;
-  margin-bottom: 28px;
-  border: none;
-  box-shadow: none;
-  background: #e3e3e3;
-  display: block;
 }
 
-.advantage__title {
-  font-family: 'Comfortaa', cursive;
-  font-size: 1.7rem;
+.card-text {
+  flex: 1;
+}
+
+.card-title {
+  font-family: 'Comfortaa', 'Fira Sans', sans-serif;
+  font-size: 27px;
   font-weight: 700;
   margin-bottom: 16px;
   color: #222;
-  line-height: 1.18;
 }
 
-/* Разбивка заголовка второй карточки */
-.advantage:nth-child(2) .advantage__title {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.advantage:nth-child(2) .advantage__title::after {
-  content: "довговічність";
+.card-title br {
   display: block;
-  margin-top: 4px;
+  content: "";
+  margin-bottom: 5px;
 }
 
-.advantage__desc {
-  font-family: 'Fira Sans', Arial, sans-serif;
+.card-desc {
+  font-family: 'Fira Sans', 'Comfortaa', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.6;
-  letter-spacing: 0;
   color: #444;
-  margin-bottom: 0;
 }
 
+/* --- Tablet --- */
 @media (max-width: 768px) {
   .advantages {
     padding: 32px 24px 0;
     box-sizing: border-box;
   }
 
-  /* Шапка */
-  .advantages__header {
+  .header {
     margin: 0 0 24px 24px;
     text-align: left;
     max-width: 100%;
   }
 
-  /* Сетка карточек */
-  .advantages__row {
+  .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
@@ -134,80 +112,124 @@ body {
     padding: 0;
   }
 
-  /* Общие стили карточек */
-  .advantage {
+  .card {
     width: 100%;
-    margin: 0;
     display: flex;
     flex-direction: column;
   }
 
-  /* Первые две карточки */
-  .advantage:not(:nth-child(3)) {
+  .card:not(:nth-child(3)) {
     padding: 0 12px;
   }
 
-  .advantage:not(:nth-child(3)) img {
+  .card:not(:nth-child(3)) img {
     height: 180px;
     border-radius: 16px;
     margin-bottom: 16px;
-    width: 100%;
-    object-fit: cover;
   }
 
-  /* Текстовая часть */
-  .advantage__text-container {
+  .card-text {
     min-height: 110px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
-  .advantage__desc {
+  .card-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
     margin-top: auto;
-    padding-bottom: 8px;
   }
 
-  /* Разбивка заголовка первой карточки */
-  .advantage:nth-child(1) .advantage__title {
+  .card:nth-child(1) .card-title {
     display: flex;
     flex-direction: column;
     line-height: 1.3;
   }
 
-  .advantage:nth-child(1) .advantage__title::after {
-    content: "екологічність";
+  .card:nth-child(1) .card-title::after {
     display: block;
     margin-top: 4px;
   }
 
-  /* Третья карточка - Стильний та сучасний дизайн */
-  .advantage:nth-child(3) {
+  .card:nth-child(3) {
     grid-column: span 2;
-    width: calc(100% - 48px); /* Фиксированные отступы по 24px с каждой стороны */
+    width: calc(100% - 48px);
     margin: 24px auto 0;
     padding: 0;
   }
 
-  .advantage:nth-child(3) img {
+  .card:nth-child(3) img {
     width: 100%;
-    height: 416.84px;
+    height: 416px;
     max-height: 50vh;
     border-radius: 12px;
     object-fit: cover;
     margin-bottom: 16px;
   }
 
-  /* Типографика */
-  .advantage__title {
-    font-size: 1.25rem;
-    margin-bottom: 8px;
-    text-align: left;
+  .card:nth-child(3) .card-text {
+    justify-content: flex-start;
   }
 
-  .advantage__desc {
-    font-size: 0.875rem;
-    line-height: 1.5;
+  .card:nth-child(3) .card-desc {
+    margin-top: 0;
+  }
+}
+
+/* --- Mobile 320px --- */
+@media (max-width: 320px) {
+  .advantages {
+    padding: 16px 0;
+    box-sizing: border-box;
+  }
+
+  .title {
+    white-space: pre-line;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .card {
+    width: 288px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card img {
+    width: 288px !important;
+    height: 198px !important;
+    border-radius: 32px;
+    object-fit: cover;
+    margin-bottom: 12px;
+  }
+
+  .card-text {
+    width: 288px;
+    padding: 0;
+  }
+
+  .card:nth-child(3) {
+    width: 288px !important;
+  }
+
+  .card:nth-child(3) img {
+    width: 288px !important;
+    height: 198px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    white-space: pre-line;
     text-align: left;
+    font-size: 32px;
+    line-height: 1.2;
   }
 }
